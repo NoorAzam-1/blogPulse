@@ -14,7 +14,7 @@ const Users = () => {
     try {
       const res = await axios.get("/admin/users");
       setUsers(res.data);
-    } catch (error) {
+    } catch  {
       toast.error("Failed to fetch users");
     } finally {
       setLoading(false);
@@ -32,7 +32,7 @@ const Users = () => {
       setUsers((prev) =>
         prev.map((u) => (u._id === user._id ? { ...u, blocked: res.data.blocked } : u))
       );
-    } catch (error) {
+    } catch  {
       toast.error("Failed to block/unblock user");
     }
   };
@@ -46,7 +46,7 @@ const Users = () => {
       const res = await axios.put(`/admin/users/${user._id}/role`);
       toast.success(res.data.message);
       fetchUsers();
-    } catch (error) {
+    } catch  {
       toast.error("Failed to update role");
     }
   };
@@ -61,7 +61,7 @@ const Users = () => {
       const res = await axios.delete(`/admin/users/${user._id}`);
       toast.success(res.data.message);
       fetchUsers();
-    } catch (error) {
+    } catch  {
       toast.error("Failed to delete user");
     }
   };

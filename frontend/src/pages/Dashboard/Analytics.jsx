@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "../../api/axios";
 import { toast } from "react-toastify";
 import { FaUser, FaPenNib, FaHeart, FaCommentAlt } from "react-icons/fa";
-import AdminModerationPage from "./AdminModeration";
 
 const Analytics = () => {
   const [stats, setStats] = useState(null);
@@ -11,7 +10,7 @@ const Analytics = () => {
     try {
       const res = await axios.get("/admin/analytics");
       setStats(res.data);
-    } catch (error) {
+    } catch  {
       toast.error("Failed to fetch analytics");
     }
   };
@@ -62,7 +61,6 @@ const Analytics = () => {
         </div>
 
       </div>
-      {/* <AdminModerationPage/> */}
     </div>
   );
 };

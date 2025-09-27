@@ -82,7 +82,6 @@ function App() {
         >
           <Route index element={<AdminDashboard />} />
           <Route path="tags" element={<TagsAdmin />} />
-          {/* <Route path="users" element={<Users />} /> */}
           <Route path="posts" element={<Posts />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="ai" element={<AiPostGenerator />} />

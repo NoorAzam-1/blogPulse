@@ -15,7 +15,7 @@ const PostDetailComments = ({ postId }) => {
     try {
       const res = await axios.get(`/comments/post/${postId}`);
       setComments(res.data);
-    } catch (error) {
+    } catch  {
       toast.error("Failed to load comments");
     } finally {
       setLoading(false);
@@ -29,7 +29,7 @@ const PostDetailComments = ({ postId }) => {
       toast.success("Comment added");
       setNewComment("");
       fetchComments();
-    } catch (error) {
+    } catch  {
       toast.error("Failed to add comment");
     }
   };

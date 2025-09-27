@@ -14,7 +14,7 @@ const SavedPosts = () => {
     try {
       const res = await axios.get("/posts/saved");
       setPosts(res.data);
-    } catch (err) {
+    } catch  {
       toast.error("Failed to fetch saved posts");
     } finally {
       setLoading(false);
@@ -26,7 +26,7 @@ const SavedPosts = () => {
       await axios.put(`/posts/${postId}/unsave`);
       toast.success("Post unsaved successfully");
       fetchSavedPosts();
-    } catch (err) {
+    } catch  {
       toast.error("Failed to unsave post");
     }
   };

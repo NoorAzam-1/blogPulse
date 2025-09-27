@@ -3,15 +3,29 @@ import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
     const { user, logout } = useAuth();
+    const blogIconSvg = (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-10 w-10 text-sky-400"
+        >
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>
+    );
 
     return (
-        <nav className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 py-4 px-10">
+        <nav className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 py-4 px-24">
             <div className="container mx-auto flex justify-between items-center">
                 <Link
                     to="/"
-                    className="text-2xl font-bold tracking-wide transition-colors duration-300 hover:text-sky-300"
+                    className="flex gap-4 text-2xl font-bold tracking-wide transition-colors duration-300 text-sky-300 hover:text-sky-500"
                 >
-                    Blogging
+                    {blogIconSvg}<span>BlogPulse</span>
                 </Link>
 
                 <div className="flex items-center space-x-6">

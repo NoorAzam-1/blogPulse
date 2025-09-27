@@ -19,7 +19,7 @@ const PostDetail = () => {
     try {
       const res = await axios.get(`/posts/${id}`);
       setPost(res.data);
-    } catch (error) {
+    } catch  {
       toast.error("Failed to load post");
     } finally {
       setLoading(false);
@@ -33,7 +33,7 @@ const PostDetail = () => {
       toast.success(
         saved ? "Removed from saved posts" : "Post saved successfully"
       );
-    } catch (error) {
+    } catch  {
       toast.error("Failed to save post");
     }
   };

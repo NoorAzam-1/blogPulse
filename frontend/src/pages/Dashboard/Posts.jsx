@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "../../api/axios";
 import { toast } from "react-toastify";
-import { useAuth } from "../../context/AuthContext";
 import { FaEdit, FaTrashAlt, FaSave, FaTimes } from "react-icons/fa";
 
 const Posts = () => {
@@ -10,14 +9,13 @@ const Posts = () => {
   const [loading, setLoading] = useState(false);
   const [editingPostId, setEditingPostId] = useState(null);
   const [selectedTags, setSelectedTags] = useState([]);
-  const { user } = useAuth();
   
   const fetchPosts = async () => {
     setLoading(true);
     try {
       const res = await axios.get("/admin/posts");
       setPosts(res.data);
-    } catch (error) {
+    } catch  {
       toast.error("Failed to fetch posts");
     } finally {
       setLoading(false);
@@ -28,7 +26,7 @@ const Posts = () => {
     try {
       const res = await axios.get("/admin/tags");
       setTags(res.data);
-    } catch (error) {
+    } catch  {
       toast.error("Failed to fetch tags");
     }
   };
@@ -39,7 +37,7 @@ const Posts = () => {
       await axios.delete(`/admin/posts/${id}`);
       toast.success("Post deleted successfully");
       fetchPosts();
-    } catch (error) {
+    } catch  {
       toast.error("Failed to delete post");
     }
   };
@@ -55,7 +53,7 @@ const Posts = () => {
       setEditingPostId(null);
       setSelectedTags([]);
       fetchPosts();
-    } catch (error) {
+    } catch  {
       toast.error("Failed to update tags");
     }
   };

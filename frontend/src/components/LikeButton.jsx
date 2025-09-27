@@ -33,7 +33,7 @@ const LikeButton = ({ postId }) => {
         setLikes(likes + 1);
       }
       setLiked(!liked);
-    } catch (error) {
+    } catch  {
       toast.error("Failed to update like");
     }
   };

@@ -31,7 +31,7 @@ const MyPosts = () => {
         }
 
         setPosts(postsData);
-      } catch (error) {
+      } catch  {
         toast.error("Failed to fetch posts");
       } finally {
         setLoading(false);

@@ -28,7 +28,7 @@ const AdminDashboard = () => {
     try {
       const res = await axios.get("/admin/analytics");
       setStats(res.data);
-    } catch (error) {
+    } catch  {
       toast.error("Failed to fetch analytics");
     }
   };
@@ -38,7 +38,7 @@ const AdminDashboard = () => {
     try {
       const res = await axios.get("/admin/users");
       setUsers(res.data);
-    } catch (error) {
+    } catch  {
       toast.error("Failed to fetch users");
     } finally {
       setLoadingUsers(false);
@@ -63,7 +63,7 @@ const AdminDashboard = () => {
           u._id === user._id ? { ...u, blocked: res.data.blocked } : u
         )
       );
-    } catch (error) {
+    } catch  {
       toast.error("Failed to block/unblock user");
     }
   };
@@ -77,7 +77,7 @@ const AdminDashboard = () => {
       const res = await axios.put(`/admin/users/${user._id}/role`);
       toast.success(res.data.message);
       fetchUsers();
-    } catch (error) {
+    } catch  {
       toast.error("Failed to update role");
     }
   };
@@ -93,7 +93,7 @@ const AdminDashboard = () => {
       const res = await axios.delete(`/admin/users/${user._id}`);
       toast.success(res.data.message);
       fetchUsers();
-    } catch (error) {
+    } catch  {
       toast.error("Failed to delete user");
     }
   };
@@ -102,8 +102,8 @@ const AdminDashboard = () => {
       (filterRole === "all" || user.role === filterRole) &&
       (filterStatus === "all" ||
         (filterStatus === "active" ? !user.blocked : user.blocked)) &&
-      (user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        user.email.toLowerCase().includes(searchQuery.toLowerCase()))
+      (user?.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        user?.email?.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
   return (

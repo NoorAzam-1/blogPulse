@@ -13,7 +13,7 @@ const PostList = () => {
       try {
         const res = await axios.get(`/posts${search}`);
         setPosts(res.data);
-      } catch (error) {
+      } catch  {
         console.error("Failed to fetch posts");
       }
     };

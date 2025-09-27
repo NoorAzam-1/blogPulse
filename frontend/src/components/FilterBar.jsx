@@ -16,7 +16,7 @@ const FilterBar = () => {
         const categoriesRes = await axios.get("/categories");
         setTags(tagsRes.data);
         setCategories(categoriesRes.data);
-      } catch (error) {
+      } catch  {
         console.error("Failed to fetch filters");
       }
     };

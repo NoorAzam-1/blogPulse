@@ -14,7 +14,7 @@ const TagsAdmin = () => {
     try {
       const res = await axios.get("/admin/tags");
       setTags(res.data);
-    } catch (error) {
+    } catch  {
       toast.error("Failed to fetch tags");
     } finally {
       setLoading(false);
@@ -57,7 +57,7 @@ const TagsAdmin = () => {
       await axios.delete(`/admin/tags/${id}`);
       toast.success("Tag deleted successfully");
       fetchTags();
-    } catch (error) {
+    } catch  {
       toast.error("Failed to delete tag");
     }
   };
