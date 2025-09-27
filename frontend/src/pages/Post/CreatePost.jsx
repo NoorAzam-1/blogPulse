@@ -17,17 +17,13 @@ const CreatePost = () => {
   const [newTag, setNewTag] = useState("");
   const [allTags, setAllTags] = useState([]);
   const [status, setStatus] = useState("draft");
-  const [image, setImage] = useState(null);
-  const [preview, setPreview] = useState(null);
-  const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-  // Fetch existing tags for user
   useEffect(() => {
     const fetchTags = async () => {
       try {
         const res = await axios.get("/users/tags"); 
         setAllTags(res.data.map((tag) => tag.name));
-        console.log(res.data)
       } catch (error) {
         console.error("Failed to fetch tags", error);
       }
@@ -82,8 +78,6 @@ const CreatePost = () => {
       formData.append("content", content);
       formData.append("status", "draft");
       tags.forEach((tag) => formData.append("tags[]", tag));
-      if (image) formData.append("coverImage", image);
-
       const res = await axios.post("/posts", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
@@ -124,7 +118,6 @@ const CreatePost = () => {
           </h1>
 
           <div className="flex flex-col gap-6">
-            {/* Title */}
             <input
               type="text"
               placeholder="Enter post title/topic"

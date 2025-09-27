@@ -7,7 +7,6 @@ const Navbar = () => {
     return (
         <nav className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 py-4 px-10">
             <div className="container mx-auto flex justify-between items-center">
-                {/* Main Brand/Logo */}
                 <Link
                     to="/"
                     className="text-2xl font-bold tracking-wide transition-colors duration-300 hover:text-sky-300"
@@ -15,10 +14,8 @@ const Navbar = () => {
                     Blogging
                 </Link>
 
-                {/* Navigation Links */}
                 <div className="flex items-center space-x-6">
                     {user ? (
-                        // Links for authenticated users
                         <>
                             <Link
                                 to="/my-posts"
@@ -40,7 +37,6 @@ const Navbar = () => {
                             </button>
                         </>
                     ) : (
-                        // Links for guest users
                         <>
                             <Link
                                 to="/auth"

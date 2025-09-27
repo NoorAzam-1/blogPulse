@@ -43,7 +43,7 @@ function App() {
           path="/create-post"
           element={
             <ProtectedRoute>
-              <CreatePost /> {/* Replace with CreatePost later */}
+              <CreatePost />
             </ProtectedRoute>
           }
         />
@@ -60,7 +60,7 @@ function App() {
           path="/my-posts"
           element={
             <ProtectedRoute>
-              <MyPosts /> {/* Replace with CreatePost later */}
+              <MyPosts />
             </ProtectedRoute>
           }
         />
@@ -68,11 +68,10 @@ function App() {
           path="/edit-post/:id"
           element={
             <ProtectedRoute>
-              <EditPost /> {/* Replace with CreatePost later */}
-            </ProtectedRoute>
+              <EditPost />            
+               </ProtectedRoute>
           }
         />
-        {/* Admin dashboard */}
         <Route
           path="/dashboard/*"
           element={
@@ -90,7 +89,6 @@ function App() {
           <Route path="comments" element={<CommentsPage />} />
         </Route>
 
-        {/* Fallback */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Suspense>
