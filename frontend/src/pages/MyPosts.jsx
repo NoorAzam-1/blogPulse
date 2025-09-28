@@ -19,7 +19,6 @@ const MyPosts = () => {
           res = await axios.get("/posts/saved");
         } else {
           res = await axios.get("/posts");
-          console.log(res.data);
         }
 
         let postsData = res.data;
