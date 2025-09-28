@@ -9,14 +9,14 @@ const Home = () => {
             <Navbar />
 
             <main className="flex-grow">
-                <div className="text-white pt-32 pb-40 relative overflow-hidden">
+                <div className="text-white py-8 md:py-20 relative overflow-hidden">
                     <div className="absolute inset-0 -z-10 overflow-hidden">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
                         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
                     </div>
 
-                    <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-16 xl:px-24 text-center relative z-10">
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight text-balance">
+                    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-16 xl:px-24 text-center relative z-10">
+                        <h1 className="text-2xl sm:text-4xl md:text-7xl font-extrabold leading-tight tracking-tight text-balance">
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-sky-600">
                                 Discover captivating reads,
                             </span>

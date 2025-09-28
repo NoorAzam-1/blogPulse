@@ -19,21 +19,21 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 py-4 px-24">
+        <nav className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 py-2 md:py-4 px-2 md:px-24">
             <div className="container mx-auto flex justify-between items-center">
                 <Link
                     to="/"
-                    className="flex gap-4 text-2xl font-bold tracking-wide transition-colors duration-300 text-sky-300 hover:text-sky-500"
+                    className="flex justify-center items-center gap-1 md:gap-4 text-lg md:text-2xl font-bold tracking-wide transition-colors duration-300 text-sky-300 hover:text-sky-500"
                 >
                     {blogIconSvg}<span>BlogPulse</span>
                 </Link>
 
-                <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-2 md:space-x-6">
                     {user ? (
                         <>
                             <Link
                                 to="/my-posts"
-                                className="text-lg font-medium transition-colors duration-300 hover:text-sky-300"
+                                className="text-sm md:text-lg font-medium transition-colors duration-300 hover:text-sky-300"
                             >
                                 My Posts
                             </Link>
@@ -54,13 +54,13 @@ const Navbar = () => {
                         <>
                             <Link
                                 to="/auth"
-                                className="text-lg font-medium transition-colors duration-300 hover:text-sky-300"
+                                className="md:text-lg font-medium transition-colors duration-300 hover:text-sky-300"
                             >
                                 Login
                             </Link>
                             <Link
                                 to="/auth"
-                                className="bg-gradient-to-r from-sky-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-sky-600 hover:to-blue-700 transition-colors duration-300"
+                                className="bg-gradient-to-r from-sky-500 to-blue-600 text-white px-2 py-1 md:px-4 md:py-2 rounded-lg font-semibold hover:from-sky-600 hover:to-blue-700 transition-colors duration-300"
                             >
                                 Register
                             </Link>
