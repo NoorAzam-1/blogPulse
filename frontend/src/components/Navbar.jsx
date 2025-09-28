@@ -23,29 +23,29 @@ const Navbar = () => {
             <div className="container mx-auto flex justify-between items-center">
                 <Link
                     to="/"
-                    className="flex justify-center items-center gap-1 md:gap-4 text-lg md:text-2xl font-bold tracking-wide transition-colors duration-300 text-sky-300 hover:text-sky-500"
+                    className="flex justify-center items-center gap-1 md:gap-4 text-md md:text-2xl font-bold tracking-wide transition-colors duration-300 text-sky-300 hover:text-sky-500"
                 >
                     {blogIconSvg}<span>BlogPulse</span>
                 </Link>
 
-                <div className="flex items-center space-x-2 md:space-x-6">
+                <div className="flex items-center space-x-1 md:space-x-6">
                     {user ? (
                         <>
                             <Link
                                 to="/my-posts"
-                                className="text-sm md:text-lg font-medium transition-colors duration-300 hover:text-sky-300"
+                                className="text-xs md:text-lg font-medium transition-colors duration-300 hover:text-sky-300"
                             >
                                 My Posts
                             </Link>
                             <Link
                                 to="/create-post"
-                                className="bg-gradient-to-r from-sky-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-sky-600 hover:to-blue-700 transition-colors duration-300"
+                                className="bg-gradient-to-r from-sky-500 to-blue-600 text-white text-xs md:text-lg px-2 py-1 md:px-4 md:py-2 rounded-lg font-semibold hover:from-sky-600 hover:to-blue-700 transition-colors duration-300"
                             >
                                 Create Post
                             </Link>
                             <button
                                 onClick={logout}
-                                className="text-lg font-medium transition-colors duration-300 hover:text-red-400"
+                                className="text-xs md:text-lg font-medium transition-colors duration-300 hover:text-red-400"
                             >
                                 Logout
                             </button>

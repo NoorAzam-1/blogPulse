@@ -42,7 +42,7 @@ const MyPosts = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-950 text-gray-300">
       <Navbar />
-      <div className="flex-grow max-w-6xl mx-auto p-8 w-full">
+      <div className="flex-grow max-w-6xl mx-auto p-2 md:p-8 w-full">
         <h1 className="text-4xl font-extrabold text-gray-100 mb-8 text-center tracking-tight">
           My Posts
         </h1>
