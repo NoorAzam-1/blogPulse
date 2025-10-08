@@ -44,15 +44,15 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/create-post"
-                                className="bg-gradient-to-r from-sky-500 to-blue-600 text-white text-xs md:text-lg px-2 py-1 md:px-4 md:py-2 rounded-lg font-semibold hover:from-sky-600 hover:to-blue-700 transition-colors duration-300"
+                                className="bg-gradient-to-r from-sky-500 to-blue-600 text-white text-xs md:text-lg px-1 py-1 md:px-4 md:py-2 rounded-sm font-semibold hover:from-sky-600 hover:to-blue-700 transition-colors duration-300"
                             >
                                 Create Post
                             </Link>
                             <button
                                 onClick={logout}
-                                className="text-xs md:text-lg font-medium transition-colors duration-300 hover:text-red-400"
+                                className="text-xs bg-red-600 p-1 md:px-4 md:py-2 rounded-sm md:text-lg font-medium transition-colors duration-300 text-white hover:bg-red-400"
                             >
-                                Logout
+                                LogOut
                             </button>
                         </>
                     ) : (
