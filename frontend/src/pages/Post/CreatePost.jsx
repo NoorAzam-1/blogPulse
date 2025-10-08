@@ -117,7 +117,7 @@ const CreatePost = () => {
             Create a New Post
           </h1>
 
-          <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex flex-col gap-2 md:gap-6">
             <input
               type="text"
               placeholder="Enter post title/topic"
@@ -189,7 +189,7 @@ const CreatePost = () => {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mt-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
               <label className="flex items-center gap-2 text-gray-400">
                 <input
                   type="radio"

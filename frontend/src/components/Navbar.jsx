@@ -19,7 +19,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 py-2 md:py-4 px-2 md:px-24">
+        <nav className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 px-2 sm:px-3 py-2 md:py-4 md:px-10 lg:px-16">
             <div className="container mx-auto flex justify-between items-center">
                 <Link
                     to="/"
@@ -28,7 +28,12 @@ const Navbar = () => {
                     {blogIconSvg}<span>BlogPulse</span>
                 </Link>
 
-                <div className="flex items-center space-x-1 md:space-x-6">
+                <div
+                    className={`flex items-center ${user
+                        ? "space-x-1 sm:space-x-2 md:space-x-6"
+                        : "space-x-2 sm:space-x-3 md:space-x-6"
+                        }`}
+                >
                     {user ? (
                         <>
                             <Link
@@ -67,6 +72,7 @@ const Navbar = () => {
                         </>
                     )}
                 </div>
+
             </div>
         </nav>
     );

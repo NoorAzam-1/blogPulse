@@ -39,7 +39,7 @@ const PostDetailComments = ({ postId }) => {
   }, [postId]);
 
   return (
-    <div className="mt-8 p-6 bg-gray-950 rounded-xl shadow-2xl border border-gray-800">
+    <div className="mt-8 px-4 py-4 sm:px-5 md:px-6 lg:px-8 bg-gray-950 rounded-xl shadow-2xl border border-gray-800">
       <h2 className="text-2xl font-bold text-gray-200 mb-4 border-b-2 pb-2 border-gray-800">
         Comments
       </h2>

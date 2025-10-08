@@ -54,8 +54,8 @@ const PostDetail = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-950 text-gray-300">
       <Navbar />
-      <div className="flex-grow p-6 max-w-4xl mx-auto w-full">
-        <div className="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-800">
+      <div className="flex-grow px-2 py-4 max-w-4xl mx-auto w-full">
+        <div className="bg-gray-900 px-4 py-4 sm:px-6 md:px-7 lg:px-8 rounded-xl shadow-2xl border border-gray-800">
           {post.coverImage && (
             <img
               src={post.coverImage}

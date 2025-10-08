@@ -42,14 +42,14 @@ const MyPosts = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-950 text-gray-300">
       <Navbar />
-      <div className="flex-grow max-w-6xl mx-auto p-2 md:p-8 w-full">
+      <div className="flex-grow mx-auto py-2 px-1 md:px-10 lg:px-16 w-full">
         <h1 className="text-4xl font-extrabold text-gray-100 mb-8 text-center tracking-tight">
           My Posts
         </h1>
 
-        <div className="flex justify-center flex-wrap gap-4 mb-10">
+        <div className="flex justify-center flex-wrap gap-2 mb-10">
           <button
-            className={`px-5 py-2 rounded-full font-bold transition-all duration-300 ${
+            className={`px-3 sm:px-5 py-1 sm:py-2 rounded-lg font-bold transition-all duration-300 ${
               filter === "all"
                 ? "bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-lg transform scale-105"
                 : "bg-gray-800 text-gray-400 hover:text-gray-100 hover:bg-gray-700"
@@ -59,7 +59,7 @@ const MyPosts = () => {
             All
           </button>
           <button
-            className={`px-5 py-2 rounded-full font-bold transition-all duration-300 ${
+            className={`px-3 sm:px-5 py-1 sm:py-2 rounded-lg font-bold transition-all duration-300 ${
               filter === "published"
                 ? "bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-lg transform scale-105"
                 : "bg-gray-800 text-gray-400 hover:text-gray-100 hover:bg-gray-700"
@@ -69,7 +69,7 @@ const MyPosts = () => {
             Published
           </button>
           <button
-            className={`px-5 py-2 rounded-full font-bold transition-all duration-300 ${
+            className={`px-3 sm:px-5 py-1 sm:py-2 rounded-lg font-bold transition-all duration-300 ${
               filter === "draft"
                 ? "bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-lg transform scale-105"
                 : "bg-gray-800 text-gray-400 hover:text-gray-100 hover:bg-gray-700"
@@ -79,7 +79,7 @@ const MyPosts = () => {
             Draft
           </button>
           <button
-            className={`px-5 py-2 rounded-full font-bold transition-all duration-300 ${
+            className={`px-3 sm:px-5 py-1 sm:py-2 rounded-lg font-bold transition-all duration-300 ${
               filter === "saved"
                 ? "bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-lg transform scale-105"
                 : "bg-gray-800 text-gray-400 hover:text-gray-100 hover:bg-gray-700"
@@ -92,19 +92,19 @@ const MyPosts = () => {
 
 
         {loading ? (
-          <p className="text-center text-gray-400 mt-10 text-xl">Loading posts...</p>
+          <p className="text-center text-gray-400 mt-1 text-xl">Loading posts...</p>
         ) : posts.length === 0 ? (
           <div className="text-center mt-10">
             <p className="text-gray-400 text-xl">No posts found.</p>
             <Link
               to="/create-post"
-              className="mt-6 inline-block px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 bg-gradient-to-r from-sky-500 to-blue-600 text-white hover:from-sky-600 hover:to-blue-700 transform hover:scale-105"
+              className="my-3 inline-block text-lg sm:text-xl px-4 py-2 rounded-full font-bold shadow-lg transition-all duration-300 bg-gradient-to-r from-sky-500 to-blue-600 text-white hover:from-sky-600 hover:to-blue-700 transform hover:scale-105"
             >
               Create Your First Post
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6 lg:gap-8">
             {posts.map((post) => (
               <div
                 key={post._id}
