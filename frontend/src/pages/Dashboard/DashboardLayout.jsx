@@ -54,7 +54,6 @@ const DashboardLayout = () => {
             <Link
               key={item.to}
               to={item.to}
-              onClick={() =>setSidebarCollapsed(false)}
               className={`group flex items-center ${sidebarCollapsed ? "justify-center ":""} gap-2 px-3 py-2 rounded-md transition-colors font-medium
                 ${location.pathname === item.to
                   ? "bg-purple-500 text-white"
