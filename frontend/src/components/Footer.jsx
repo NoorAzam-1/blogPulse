@@ -101,7 +101,7 @@ const Footer = () => {
                     <li key={i}>
                       <Link
                         to={link.url}
-                        className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl hover:text-white transition-colors hover:underline"
+                        className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-lg hover:text-white transition-colors hover:underline"
                       >
                         {link.name}
                       </Link>

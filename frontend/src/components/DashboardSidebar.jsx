@@ -15,10 +15,10 @@ const DashboardSidebar = () => {
   ];
 
   return (
-    <aside className="w-64 bg-gray-800 text-white h-screen p-4">
+    <aside className="w-64 bg-gray-800 text-white p-4">
       <h2 className="text-xl font-bold mb-6">Admin Dashboard</h2>
       <nav className="flex flex-col gap-3">
-        {links.map((link) => (
+        {links.map((link) => (  
           <NavLink
             key={link.path}
             to={`/dashboard/${link.path}`}

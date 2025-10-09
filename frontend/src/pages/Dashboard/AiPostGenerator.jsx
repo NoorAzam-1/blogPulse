@@ -48,7 +48,7 @@ const AiPostGenerator = () => {
   };
 
   return (
-    <div className="p-4 md:p-8 bg-gray-50 min-h-screen rounded-lg">
+    <div className="p-4 md:p-8 bg-gray-50 min-h-screen ">
       <h1 className="text-3xl font-bold text-gray-800 mb-6">AI Post Generator</h1>
       
       <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -81,7 +81,7 @@ const AiPostGenerator = () => {
         {content && (
           <div className="mt-6">
             <textarea
-              className="p-4 w-full h-80 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 resize-none transition-colors"
+              className="p-4 w-full h-80 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500 resize-none transition-colors"
               value={content}
               onChange={(e) => setContent(e.target.value)}
             />
@@ -90,14 +90,14 @@ const AiPostGenerator = () => {
               {tags.map((tag, idx) => (
                 <span 
                   key={idx} 
-                  className="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+                  className="bg-green-200 text-gray-900 px-3 py-1 rounded-full text-sm font-medium"
                 >
                   {tag}
                 </span>
               ))}
             </div>
 
-            <div className="mt-6 text-right">
+            <div className="mt-6 text-center">
               <button
                 onClick={handleSavePost}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-green-600 hover:bg-green-700 shadow-md transition-colors"

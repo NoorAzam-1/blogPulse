@@ -70,22 +70,21 @@ const AdminCommentsPage = () => {
   }
 
   return (
-    <div className="min-h-screen p-4 md:p-8 ">
-      <div className="bg-white p-6 rounded-xl shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+    <div className="min-h-screen bg-black p-2 md:p-12 ">
+      <div className="bg-white p-2 sm:p-4 md:p-8 shadow-lg md:rounded-2xl">
+        <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
           Admin Comments Dashboard
         </h1>
 
         <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
-          <div className="flex justify-center gap-2 flex-wrap bg-gray-200 rounded-full p-1 sm:p-2 flex-1">
+          <div className="flex justify-center gap-1 flex-wrap bg-gray-200 md:rounded-full p-1 sm:p-2 md:gap-3 flex-1">
             {["all", "pending", "approved", "rejected"].map((tab) => (
               <button
                 key={tab}
-                className={`px-4 py-2 rounded-full font-semibold transition-colors text-sm ${
-                  filter === tab
+                className={`px-4 py-2 rounded-full font-semibold transition-colors text-sm ${filter === tab
                     ? "bg-green-600 text-white shadow-md"
                     : "text-gray-700 hover:bg-gray-300"
-                }`}
+                  }`}
                 onClick={() => setFilter(tab)}
               >
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -135,13 +134,12 @@ const AdminCommentsPage = () => {
 
                 <div className="mt-4 flex justify-between items-center">
                   <span
-                    className={`px-3 py-1 text-xs font-semibold rounded-full min-w-[70px] text-center ${
-                      comment.status === "approved"
+                    className={`px-3 py-1 text-xs font-semibold rounded-full min-w-[70px] text-center ${comment.status === "approved"
                         ? "bg-green-200 text-green-800"
                         : comment.status === "pending"
-                        ? "bg-yellow-200 text-yellow-800"
-                        : "bg-red-200 text-red-800"
-                    }`}
+                          ? "bg-yellow-200 text-yellow-800"
+                          : "bg-red-200 text-red-800"
+                      }`}
                   >
                     {comment.status}
                   </span>
